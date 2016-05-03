@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+	$(".loaderInner").fadeOut();
+	$(".loader").delay(400).fadeOut("slow");
 
 	$("#projects-items").mixItUp();
 
@@ -103,7 +105,4 @@ $(document).ready(function() {
 
 	$("input, select, textarea").not("[type=submit]").jqBootstrapValidation();
 
-
-	$(".loaderInner").fadeOut();
-	$(".loader").delay(400).fadeOut("slow");
 });
