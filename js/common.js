@@ -103,9 +103,7 @@ $(document).ready(function() {
 
 	$("input, select, textarea").not("[type=submit]").jqBootstrapValidation();
 
-});
 
-$(document).load(function() {
 	$(".loaderInner").fadeOut();
 	$(".loader").delay(400).fadeOut("slow");
 });
