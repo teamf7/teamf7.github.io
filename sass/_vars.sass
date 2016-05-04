@@ -1,0 +1,32 @@
+@import "bourbon"
+
+$accent: #ecb124
+$main: #222
+$bg-light: #fafafa
+
+
+=kerning($kerning)
+  letter-spacing: $kerning + px
+
+=mt($time)
+  transition: all $time+s ease
+
+.bg-dark
+  background: $main
+  color: #fff
+  .descr-wrap
+    color: darken(#fff, 20%)
+    .descr
+      &::after
+        background-color: #fff
+.bg-light
+  background: $bg-light
+  color: #000
+  a
+    color: #000
+  .descr-wrap
+    .descr
+      &::after
+        background-color: $main
+
+
