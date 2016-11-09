@@ -1,0 +1,198 @@
+@import "bourbon"
+@import "vars.sass"
+@import "app/libs/font-awesome/css/font-awesome.min"
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.6
+  font-family: "OpenSansRegular", sans-serif
+  overflow-x: hidden
+  color: #222
+
+h1,h2,h3,h4,h5,h6
+  font-family: "OpenSansLight", sans-serif
+  font-weight: normal
+h1
+  font-size: em(41px)
+  line-height: 1.15
+h2
+  font-size: em(32px)
+
+h3,h4
+  font-family: "OpenSansSemiBold", sans-serif
+  text-transform: uppercase
+  font-size: em(12px)
+
+h4
+  font-size: em(15px)
+
+.hidden
+  display: none
+
+a
+  color: #fff
+  outline: none !important
+  &:hover, &:active, &:focus
+    text-decoration: none
+
+.text-center
+  text-align: center
+
+b, strong
+  font-family: "OpenSansSemiBold", sans-serif
+  font-weight: normal
+
+
+header
+  position: relative
+.top-line
+  position: relative
+  background-color: $main
+  text-align: center
+  font-family: "OpenSansSemiBold", sans-serif
+  color: #fff
+  a
+    &:active, &:focus
+      background-color: $main
+      color: #fff
+  .top-logo
+    float: left
+    position: relative
+    padding: 20px 28px
+    &:hover
+      color: $accent
+      background-color: darken($main, 10%)
+  .top-menu
+    margin: 0
+    padding: 0
+  li
+    cursor: pointer
+    list-style-type: none
+    display: inline-block
+    padding: 20px 28px
+    &:hover
+      background-color: darken($main, 10%)
+      a
+        color: $accent
+
+
+  
+.slider-wrap
+  position: relative
+  .slider-nav-wrap
+    font-size: em(36px)
+    position: relative
+    top: 170px
+    color: #fff
+    .slider-nav
+      z-index: 1
+      position: absolute
+      width: 100%
+      div
+        cursor: pointer
+        position: absolute
+        &:last-child
+          right: 0
+.slider
+  top: 0
+  width: 100%
+  .slide-wrap
+    display: inline-block
+    &.active
+      .slide
+        h2
+          opacity: 1
+          left: 0
+        p
+          opacity: 0.75
+          left: 0
+    .slide
+      position: relative
+      width: 100%
+      h2
+        position: relative
+        margin: 0 0 25px
+        line-height: 1em
+        font-size: em(46px)
+        +mt(1)
+        opacity: 0
+        left: 100px
+      p
+        position: relative
+        font-size: em(16px)
+        margin: 0 0 20px
+        +mt(1)
+        left: 100px
+        opacity: 0
+        transition-delay: .25s
+      a
+        color: #fff
+        text-decoration: none
+        float: left
+      &-bg
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        background-size: cover
+        background-position: center
+        &::before
+          content: ''
+          top: 0
+          width: 100%
+          height: 100%
+          background: $main
+          position: absolute
+          opacity: .85
+      &-content
+        position: relative
+        padding-top: 100px
+        padding-bottom: 80px
+        color: #fff
+        min-height: 500px
+
+.teaser
+  background: $main
+  color: #fff
+  padding: 40px 0 30px
+  &-item-padding
+    padding-top: 10px
+  &-item
+    display: table-row
+  &-count
+    display: table-cell
+    vertical-align: middle
+    &-wrap
+      width: 43px
+      height: 43px
+      position: relative
+    .fa::before
+      top: -5px
+      left: -10px
+      position: absolute
+      font-size: 48px
+      color: lighten($main, 15%)
+    .teaser-number
+      position: absolute
+      left: 0
+      top: 5px
+      width: 100%
+      text-align: center
+      color: $accent
+  &-text
+    display: table-cell
+    line-height: 20px
+    opacity: .56
+
+
+
+button
+  background-color: transparent
+  border: none
+  margin-top: 16px
+  color: #fff
+  float: right
+  font-size: 20px
